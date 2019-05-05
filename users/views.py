@@ -26,8 +26,7 @@ def login(request):
                 auth_login(request, user)
                 # return redirect('home')
                 return redirect(next)
-        else:
-            print(form.errors)
+
     else:
         next = request.GET.get('next', '/')
         form = UserLoginForm()
